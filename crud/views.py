@@ -334,7 +334,7 @@ def login_view(request):
                     request.session['user_id'] = user.user_id
                     request.session['username'] = user.username
                     request.session['is_authenticated'] = True  # Add this flag
-                    messages.success(request, f'Welcome! {user.full_name}')
+                    messages.success(request, f'Welcome!! {user.full_name}')
                     return redirect('/gender/list')
                 else:
                     messages.error(request, 'Invalid username or password.')
